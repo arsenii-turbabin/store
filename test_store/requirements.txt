@@ -1,8 +1,12 @@
 asgiref==3.11.1
 Django==4.2
 djangorestframework==3.17.1
+flake8==7.3.0
+mccabe==0.7.0
 psycopg==3.3.4
 psycopg-binary==3.3.4
+pycodestyle==2.14.0
+pyflakes==3.4.0
 python-dotenv==1.2.2
 sqlparse==0.5.5
 typing_extensions==4.15.0
