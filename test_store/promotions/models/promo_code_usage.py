@@ -8,13 +8,16 @@ class PromoCodeUsage(models.Model):
         on_delete=models.CASCADE,
         related_name="promo_code_usages",
     )
-
     promo_code = models.ForeignKey(
         "promotions.PromoCode",
         on_delete=models.CASCADE,
         related_name="usages",
     )
-
+    order = models.OneToOneField(
+        "orders.Order",
+        on_delete=models.CASCADE,
+        related_name="promo_usage",
+    )
     created_at = models.DateTimeField(
         auto_now_add=True,
     )
