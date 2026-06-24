@@ -1,10 +1,11 @@
-from django.conf import settings
 from django.db import models
+
+from users.models import User
 
 
 class Order(models.Model):
     user = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
+        User,
         on_delete=models.PROTECT,
         related_name="orders",
     )
